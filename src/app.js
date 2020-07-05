@@ -1,13 +1,16 @@
 import React from 'react';
 
-import ToDo from './components/todo/todo.js';
+// import ToDo from './components/todo/todo.js';
+import Routes from './components/router';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
-export default class App extends React.Component {
-  render() {
+export default function App() {
     return (
       <>
-        <ToDo />
+      <Header />
+      <Routes />
+      <Footer />
       </>
     );
-  }
 }
