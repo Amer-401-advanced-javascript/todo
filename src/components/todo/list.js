@@ -7,11 +7,13 @@ function TodoList (props) {
       <ul>
         {props.list.map(item => (
           <li
-            className={`complete-${item.complete.toString()}`}
+            // className={`complete-${item.complete.toString()}`}
             key={item._id}
           >
             <span onClick={() => props.handleComplete(item._id)}>
-              {item.text}
+              {console.log(item)}
+              
+              {item.item}
             </span>
           </li>
         ))}

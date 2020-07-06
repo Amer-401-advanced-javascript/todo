@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import ToDo from "./todo/todo";
+import ToDo from "./todo/todo-connected.js";
 
 const Routes = (props) => {
   return(

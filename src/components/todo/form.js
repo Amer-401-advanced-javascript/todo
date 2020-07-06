@@ -5,8 +5,6 @@ import Form from "react-bootstrap/Form";
 function TodoForm(props) {
   const [item, setItem] = useState({});
   const handleInputChange = (e) => {
-    console.log(e.target.name, e.target.value);
-
     setItem({ ...item, [e.target.name]: e.target.value });
   };
 
@@ -25,7 +23,7 @@ function TodoForm(props) {
         <Form.Group>
           <Form.Label>To Do Item</Form.Label>
           <Form.Control
-            name="text"
+            name="item"
             placeholder="Add To Do List Item"
             onChange={handleInputChange}
           />
