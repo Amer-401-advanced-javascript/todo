@@ -6,10 +6,10 @@
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-- [ci/cd](http://xyz.com) (GitHub Actions)
+- [submission PR](https://github.com/Amer-401-advanced-javascript/todo/pull/1)
+<!-- - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [front-end application](http://xyz.com) (when applicable) -->
 
 ### Setup
 
@@ -35,3 +35,5 @@ i.e.
 #### UML
 
 Link to an image of the UML for your application and response to events
+
+[ToDo UML](https://drive.google.com/file/d/1TSl8D8lxB2JlXqhCKrm3GOLKJZfEVVpL/view?usp=sharing)
