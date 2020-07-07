@@ -12,7 +12,6 @@ const useForm = (callback) => {
         if(event) event.preventDefault();
         event.target.reset();
         console.log(event);
-        
     }
 
 
