@@ -21,7 +21,7 @@ function TodoForm(props) {
         <Form.Group>
           <Form.Label>To Do Item</Form.Label>
           <Form.Control
-            name="item"
+            name="text"
             placeholder="Add To Do List Item"
             onChange={handleInputChange}
           />
