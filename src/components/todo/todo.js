@@ -44,7 +44,7 @@ function ToDo () {
   //   setList(list);
   // },[]);
   useEffect(() => {
-    let list = getNote('https://lab32-401.herokuapp.com/todo')
+   getNote('https://lab32-401.herokuapp.com/todo')
   }, [])
 
  
