@@ -4,12 +4,13 @@ import Form from "react-bootstrap/Form";
 import useForm from '../hooks/formHook';
 
 function TodoForm(props) {
-  const [item, setItem] = useState({});
+  // const [item, setItem] = useState({});
   const [handleSubmit, handleInputChange] = useForm(settingItem)
 
   function settingItem(note){
     console.log(note);
-    setItem(note);
+    props.handleSubmit(note);
+    // setItem(note);
   }
 
   return (
