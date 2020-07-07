@@ -5,10 +5,9 @@ const useForm = (callback) => {
 
 
     const handleInputChange = event => {
-        console.log(event.target.value);
-        setValue({[event.target.name]:event.target.value})
-        
+        setValue({[event.target.name]:event.target.value})        
     }
+    
     const handleSubmit = event =>{
         if(event) event.preventDefault();
         event.target.reset();

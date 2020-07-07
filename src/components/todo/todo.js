@@ -13,6 +13,8 @@ function ToDo () {
   const addItem = (item) => {
     item._id = Math.random();
     item.complete = false;
+    console.log(item);
+    
     setList([...list, item]);
        
   };
