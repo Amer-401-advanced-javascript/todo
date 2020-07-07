@@ -13,6 +13,7 @@ function TodoList (props) {
             <span onClick={() => props.handleComplete(item._id)}>              
               {item.text}
             </span>
+            <button onClick ={ () =>{ props.handleDelete(item._id)}}>delete</button>
           </li>
         ))}
       </ul>

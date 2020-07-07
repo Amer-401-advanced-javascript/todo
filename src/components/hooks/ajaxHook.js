@@ -41,11 +41,15 @@ const useAjax = (cb) => {
 
   const deleteNote = async (url, id) => {
     try {
+      let id1 = {_id: id }      
       const response = await axios({
-        method: "DELETE",
-        url: url,
-        data: id,
+       method: "delete",
+       url: url,
+       mode: "cors",
+       data: {data:id},
       });
+      console.log(response);
+      
     } catch (error) {
       console.error(error);
     }

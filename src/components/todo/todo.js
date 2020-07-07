@@ -28,6 +28,10 @@ function ToDo () {
     putNote(url,item)
 
   };
+  const deleteItem = id => {
+    let item = list.filter(value => value._id === id)[0] || {}    
+    deleteNote(url, id)
+  }
 
   
   useEffect(async() => {
@@ -55,6 +59,7 @@ function ToDo () {
             <TodoList
               list={list}
               handleComplete={toggleComplete}
+              handleDelete = {deleteItem}
             />
           </div>
         </section>
