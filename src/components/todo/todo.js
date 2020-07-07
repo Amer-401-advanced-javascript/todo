@@ -7,7 +7,7 @@ import './todo.scss';
 
 function ToDo () {
   const [list, setList] = useState([]);
-  const [getNote, postNote, putNote, deleteNote] = useAjax(setList)
+  const [getNote, postNote, putNote, deleteNote] = useAjax()
   
   function settingList(list){
     
@@ -43,8 +43,9 @@ function ToDo () {
   //   ]
   //   setList(list);
   // },[]);
-  useEffect(() => {
-   getNote('https://lab32-401.herokuapp.com/todo')
+  useEffect(async() => {
+  let list = await getNote('https://lab32-401.herokuapp.com/todo')
+  setList(list)
   }, [])
 
  

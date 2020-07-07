@@ -5,7 +5,7 @@ import useForm from '../hooks/formHook';
 
 function TodoForm(props) {
   const [item, setItem] = useState({});
-  const [handleSubmit, handleInputChange] = useForm(settingItem)
+  const [handleSubmit, handleInputChange] = useForm()
 
   function settingItem(note){
     setItem(note);

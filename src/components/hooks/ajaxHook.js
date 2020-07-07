@@ -5,7 +5,8 @@ const useAjax = (cb) => {
     const getNote = async (url) => {
         try{
             const response = await axios.get(url)
-            cb(response.data)
+            // cb(response.data)
+            return response.data
         } catch (error) { console.error(error) }
     }
 
@@ -16,7 +17,7 @@ const useAjax = (cb) => {
                 url:url,
                 data: data,
             })
-            console.log(response);
+            return response
             
         } catch(error) { console.error(error) }
     }
