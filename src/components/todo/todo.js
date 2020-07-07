@@ -7,13 +7,15 @@ import './todo.scss';
 
 function ToDo () {
   const [list, setList] = useState([]);
-  const [getNote, postNote, putNote, deleteNote] = useAjax()
+  const [getNote, postNote, putNote, deleteNote] = useAjax(setList)
   
-
+  function settingList(list){
+    
+  }
   const addItem = (item) => {
+    console.log(item);
     item._id = Math.random();
     item.complete = false;
-    console.log(item);
     
     setList([...list, item]);
        
@@ -31,16 +33,19 @@ function ToDo () {
 
   };
 
+  // useEffect(() => {
+  //   let list = [
+  //     { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A'},
+  //     { _id: 2, complete: false, text: 'Do the Laundry', difficulty: 2, assignee: 'Person A'},
+  //     { _id: 3, complete: false, text: 'Walk the Dog', difficulty: 4, assignee: 'Person B'},
+  //     { _id: 4, complete: true, text: 'Do Homework', difficulty: 3, assignee: 'Person C'},
+  //     { _id: 5, complete: false, text: 'Take a Nap', difficulty: 1, assignee: 'Person B'},
+  //   ]
+  //   setList(list);
+  // },[]);
   useEffect(() => {
-    let list = [
-      { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A'},
-      { _id: 2, complete: false, text: 'Do the Laundry', difficulty: 2, assignee: 'Person A'},
-      { _id: 3, complete: false, text: 'Walk the Dog', difficulty: 4, assignee: 'Person B'},
-      { _id: 4, complete: true, text: 'Do Homework', difficulty: 3, assignee: 'Person C'},
-      { _id: 5, complete: false, text: 'Take a Nap', difficulty: 1, assignee: 'Person B'},
-    ]
-    setList(list);
-  },[]);
+    let list = getNote('https://lab32-401.herokuapp.com/todo')
+  }, [])
 
  
 
