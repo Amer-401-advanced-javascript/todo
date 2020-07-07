@@ -4,17 +4,16 @@ import TodoList from './list.js';
 import useAjax from '../hooks/ajaxHook';
 
 import './todo.scss';
-
+let url = 'https://lab-32.herokuapp.com/todo'
 function ToDo () {
   const [list, setList] = useState([]);
   const [getNote, postNote, putNote, deleteNote] = useAjax()
   
   const addItem = (item) => {
-    item._id = Math.random();
+    // item._id = Math.random();
     item.complete = false;
-    postNote(item)
+    postNote(url, item)
     setList([...list, item]);
-       
   };
 
   const toggleComplete = id => {
@@ -26,12 +25,13 @@ function ToDo () {
       let listItems = list.map(listItem => listItem._id === item._id ? item : listItem);
       setList(listItems);
     }
+    putNote(url,item)
 
   };
 
   
   useEffect(async() => {
-  let list = await getNote('https://lab32-401.herokuapp.com/todo')
+  let list = await getNote(url)
   setList(list)
   }, [])
 

@@ -7,8 +7,7 @@ function TodoForm(props) {
   const [item, setItem] = useState({});
   const [handleSubmit, handleInputChange] = useForm(settingItem)
 
-  function settingItem(note){
-    setItem(note);
+  async function settingItem(note){
     props.handleSubmit(note);
   }
 
