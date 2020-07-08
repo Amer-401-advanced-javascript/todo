@@ -11,24 +11,23 @@ const useAjax = (cb) => {
   };
 
   const postNote = async (url, item) => {
-    try{
-    const response = axios({
-      method: "post",
-      url: url,
-      mode: "cors",
-      cache: "no-cache",
-      headers: { "Content-Type": "application/json" },
-      data: item,
-    })
-  }catch (error) {
-    console.error(error);
-  }
+    try {
+      axios({
+        method: "post",
+        url: url,
+        mode: "cors",
+        cache: "no-cache",
+        headers: { "Content-Type": "application/json" },
+        data: item,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
-
 
   const putNote = async (url, data) => {
     try {
-      const response = await axios({
+      await axios({
         method: "PUT",
         url: url,
         data: data,
@@ -37,19 +36,16 @@ const useAjax = (cb) => {
       console.error(error);
     }
   };
-  
 
-  const deleteNote = async (url, id) => {
+  const deleteNote = async (url, _id) => {
     try {
-      let id1 = {_id: id }      
-      const response = await axios({
-       method: "delete",
-       url: url,
-       mode: "cors",
-       data: {data:id},
+      let id = { _id };
+      await axios({
+        method: "delete",
+        url: url,
+        mode: "cors",
+        data: id,
       });
-      console.log(response);
-      
     } catch (error) {
       console.error(error);
     }
