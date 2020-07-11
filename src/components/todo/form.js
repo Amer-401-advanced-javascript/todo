@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React /**,{ useState } */ from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useForm from '../hooks/formHook';
 
 function TodoForm(props) {
-  const [item, setItem] = useState({});
+  // const [item, setItem] = useState({});
   const [handleSubmit, handleInputChange] = useForm(settingItem)
 
   async function settingItem(note){

@@ -1,4 +1,4 @@
-# LAB - Class 32
+# LAB - Class 33
 
 ## Project: todo
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/Amer-401-advanced-javascript/todo/pull/2)
+- [submission PR](https://github.com/Amer-401-advanced-javascript/todo/pull/3)
 <!-- - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable) -->
