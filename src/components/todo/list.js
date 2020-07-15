@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {SettingContext} from '../../context/setting/context'
+import {SettingContext} from '../../context/settings/context'
 
 function TodoList (props) {
   const context = useContext(SettingContext);

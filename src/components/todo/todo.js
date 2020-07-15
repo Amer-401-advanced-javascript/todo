@@ -3,7 +3,7 @@ import TodoForm from "./form.js";
 import TodoList from "./list.js";
 import useAjax from "../hooks/ajaxHook";
 import Paginate from '../paginate/paginate'
-import { SettingContext } from "../../context/setting/context";
+import { SettingContext } from "../../context/settings/context";
 
 import "./todo.scss";
 let url = "https://lab-32.herokuapp.com/todo";

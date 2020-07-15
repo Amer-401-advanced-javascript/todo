@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SettingContext } from "../../context/setting/context";
+import { SettingContext } from "../../context/settings/context";
 // import { Link } from 'react-router-dom';
 
 function Paginate(props) {

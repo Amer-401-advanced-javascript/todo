@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import ToDo from './components/todo/todo.js';
-import SettingProvider from './context/setting/context';
+import SettingProvider from './context/settings/context';
 import Routes from './components/router';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
