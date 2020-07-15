@@ -23,11 +23,11 @@ class LoginProvider extends React.Component {
                 mode: 'cors',
                 cache: 'no-cache',
                 headers: new Headers({
-                    'Authorization': `Basic ${btoa(`${username}:${password}`)}`
+                    'Authorization': `Basic ${btoa(`${userName}:${password}`)}`
                 })
             })
             let jsonResult = await results.json();
-            this.validateToken (res.token);
+            this.validateToken (jsonResult.token);
         } catch (error) {
             console.log(error);
         }
@@ -47,8 +47,6 @@ class LoginProvider extends React.Component {
             console.log(error);
         }
     }
-
-
 
     setLoginState = (loggedIn, token, user)=> {
         cookie.save('auth', token);
