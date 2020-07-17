@@ -4,6 +4,8 @@ import Show from '../../components/show/show'
 
 
 class Login extends React.Component {
+    static contextType = LoginContext;
+
     constructor(props){
         super(props);
         this.state = {
@@ -14,7 +16,7 @@ class Login extends React.Component {
 
     handleSubmit = e => {
         e && e.preventDefault();
-        console.log(e.target.username.value);
+        this.context.login(this.state.username, this.state.password)
     }
 
     handleInputChange = e => {

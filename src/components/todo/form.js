@@ -2,6 +2,7 @@ import React /**,{ useState } */ from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useForm from '../hooks/formHook';
+import Auth from '../../context/auth/auth'
 
 function TodoForm(props) {
   // const [item, setItem] = useState({});
@@ -13,8 +14,8 @@ function TodoForm(props) {
 
   return (
     <>
+      <Auth capability= 'write'>
       <h3>Add Item</h3>
-
       <Form onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>To Do Item</Form.Label>
@@ -50,6 +51,7 @@ function TodoForm(props) {
           Submit
         </Button>
       </Form>
+      </Auth>
     </>
   );
 }

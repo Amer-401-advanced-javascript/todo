@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import TodoForm from "./form.js";
 import TodoList from "./list.js";
 import useAjax from "../hooks/ajaxHook";
-import Paginate from '../paginate/paginate'
+import Paginate from '../paginate/paginate';
+import Auth from '../../context/auth/auth';
 import { SettingContext } from "../../context/settings/context";
 
 import "./todo.scss";
@@ -44,6 +45,7 @@ function ToDo() {
 
   return (
     <>
+    <Auth capability='read'>
       <header>
         <h2>
           There are {list.filter((item) => !item.complete).length} Items To
@@ -68,6 +70,7 @@ function ToDo() {
           />
         </div>
       </section>
+      </Auth>
     </>
   );
 }
