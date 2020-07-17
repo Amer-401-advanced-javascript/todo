@@ -2,7 +2,7 @@ import React from 'react';
 import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken';
 
-const API = 'https://lab-32.herokuapp.com/todo'
+const API = 'https://class-34-auth.herokuapp.com'
 
 export const LoginContext = React.createContext();
 
